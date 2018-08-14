@@ -1,0 +1,174 @@
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu-container {
+      padding: 15px 0;
+      display: flex;
+      justify-content: space-between;
+      font-size: 10pt;
+    }
+
+    .menu {
+      width: 100%;
+      color: grey;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .links {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .login {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+    .header-container {
+      background-color: white;
+      display: flex;
+      justify-content: center;
+    }
+
+    .header {
+      width: 100%;
+      height: 300px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .carousel-test {
+      display: flex;
+      justify-content: center;
+    }
+
+    .carousel-grid-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .carousel-grid {
+      width: 900px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      width: 200px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+    body {
+      font-family: "Open Sans", Arial;
+      width: 100%;
+    }
+    main {
+      background: white;
+      width: 100%;
+      margin: 0px auto;
+    }
+
+    #toggle {
+      display: none;
+      visibility: hidden;
+    }
+
+    label {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 150px;
+    }
+
+    #expand {
+      height: 0px;
+      overflow: hidden;
+      transition: height 0.3s;
+      background-color: #FF7C69;
+      color: white;
+    }
+
+    #toggle:checked ~ #expand {
+      height: 200px;
+    }
+
+    footer {
+      background-color: white;
+      text-align: right;
+      color: grey;
+      text-align: center;
+      position: absolute;
+      width: 100%; 
+      height: 100px;
+      display: flex;
+    }
+
+    input {
+      margin: .4rem;
+    }
+
+    .filterbutton {
+      margin-bottom: -0.2px;
+      padding: 0px;
+      width: 150px;
+      display: block;
+
+    }
+
+    .filterbutton img{
+      display: block;
+  }
+
+  /* Depreciated */
+
+  /* .footerlink {
+    font-size: 10pt;
+    text-decoration: none;
+    color: white;
+    text-align: justify;
+    display: block;
+    padding: 1px;
+  }
+
+  .social {
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    display: flex; 
+    flex-direction:row-reverse;
+  }
+
+  .social:hover {
+    opacity: 0.7;
+  } */
+
+    .swiper-container {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    }
+    .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background:white;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    }

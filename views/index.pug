@@ -1,0 +1,95 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Some Web Page
+    link(rel='stylesheet', href='styles.css')
+  body
+    .menu-container
+      .menu
+        .links
+          .signup SIGN UP
+          .login SIGN IN
+    .header-container
+      .header
+        .logo
+          //- a(href='http://localhost:3000')
+          //-   img(src="images/logo.svg")
+    main
+      input#toggle(type='checkbox')
+      label(for='toggle')
+        .filterbutton
+          img(src='images/filterbutton.svg')
+      #expand
+        section.Filter
+          h2 Text field
+          p
+            | The 
+            strong input type="text"
+            |  defines a one-line text input field:
+          form(action='/action_page.php')
+            | First name:
+            br
+            input(type='text', name='firstname')
+            br
+            |                 Last name:
+            br
+            input(type='text', name='lastname')
+            br
+            br
+            input(type='submit')
+          p Note that the form itself is not visible.
+          p Also note that the default width of a text field is 20 characters.
+    section.carousel
+    // Swiper
+    .swiper-container
+      .swiper-wrapper
+        .swiper-slide Slide 1
+        .swiper-slide Slide 2
+        .swiper-slide Slide 3
+        .swiper-slide Slide 4
+        .swiper-slide Slide 5
+        .swiper-slide Slide 6
+        .swiper-slide Slide 7
+        .swiper-slide Slide 8
+        .swiper-slide Slide 9
+        .swiper-slide Slide 10
+      // Add Pagination
+      .swiper-pagination
+      // Add Arrows
+      .swiper-button-next
+      .swiper-button-prev
+    // Swiper JS
+    script(src='swiper-4.3.5/dist/js/swiper.min.js')
+    // Initialize Swiper
+    script.
+      var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      slidesPerGroup: 3,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      },
+      navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+      },
+      });
+      console.log('test');
+  footer
+    //
+      <ul>
+      <a alt="about" title="About" href="#" class="footerlink">About</a>
+      <a alt="about" title="About" href="#" class="footerlink">Contact</a>
+      <a alt="about" title="About" href="#" class="footerlink">Team</a>
+      <a alt="about" title="About" href="#" class="footerlink">Whatever</a>
+      </ul>
+      <div class="social">
+      <img src="images/facebook.svg" alt="facebook" title="facebook" href="#">
+      <img src="images/twitter.svg" alt="twitter" title="twitter" href="#">
+      <img src="images/instagram.svg" alt="instagram" title="instagram" href="#">
+      <img src="images/snapchat.svg" alt="snapchat" title="snapchat" href="#">
+      </div>
