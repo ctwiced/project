@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-var Swiper = require('swiper');
+const Swiper = require('swiper');
 
 
 // init app
