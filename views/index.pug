@@ -8,12 +8,13 @@ html(lang='en')
 
     link(rel='stylesheet', type='text/css', href='slick/slick.css')
   body
-
+    //- Slick Carousel
     .multiple-items
       div your content
       div your content
       div your content
 
+    //- Header bar
     .menu-container
       .menu
         .links
@@ -51,10 +52,14 @@ html(lang='en')
                 | password:
                 br
                 input(type='text', name='lastname')
+                
+    //- Hero/logo image
     .header-container
       .header
         .hero
           img(src="images/hero.svg")
+
+    //- Filter
     main
       input#toggle(type='checkbox')
       label(for='toggle')
@@ -63,7 +68,8 @@ html(lang='en')
       #expand
         section.Filter
     section.carousel
-    //- Swiper
+
+    //- Swiper Carousel
     .swiper-container
       .swiper-wrapper
         .swiper-slide
@@ -90,20 +96,21 @@ html(lang='en')
           img(src="images/test11.jpg")
         .swiper-slide
           img(src="images/test12.jpg")
-      // Add Pagination
+      //- Add Pagination
       //- .swiper-pagination
-      // Add Arrows
+      //- Add Arrows
       .swiper-button-next
       .swiper-button-prev
+
     //- Swiper JS and Slick JS
     script(src='https://code.jquery.com/jquery-3.0.0.js')
     script(src='https://code.jquery.com/jquery-migrate-3.0.1.js')
     script(type='text/javascript', src='slick/slick.min.js')
-
     script(src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js')
     script(src='scripts.js')
 
+    //- Initialize Slick
     script.
         $('.multiple-items').slick({
           infinite: true,
