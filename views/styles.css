@@ -22,9 +22,9 @@
 }
 
 .post {
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-right: 25px;
 }
+
 .post-trigger:hover {
   color: lightgrey;
 }
@@ -56,23 +56,6 @@
   align-items: center;
 }
 
-.carousel-test {
-  display: flex;
-  justify-content: center;
-}
-
-.carousel-grid-container {
-  display: flex;
-  justify-content: center;
-}
-
-.carousel-grid {
-  width: 900px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
 .hero {
   width: 100%;
   display: block;
@@ -86,9 +69,10 @@ body {
   width: 100%;
 }
 main {
-  background: white;
+  background-color: white;
   width: 100%;
-  margin: 20px auto;
+  margin: 0px auto;
+  z-index: 999999;
 }
 
 #toggle {
@@ -98,9 +82,9 @@ main {
 
 label {
   display: block;
-  margin-left: auto;
+  margin-left: 600px;
   margin-right: auto;
-  width: 150px;
+  /* width: 150px; */
 }
 
 #expand {
@@ -109,10 +93,11 @@ label {
   transition: height 0.3s;
   background-color: #F47A6A;
   color: white;
+  margin-bottom: 10px;
 }
 
 #toggle:checked ~ #expand {
-  height: 200px;
+  height: 100px;
 }
 
 footer {
@@ -131,41 +116,45 @@ input {
   margin: .4rem;
 }
 
-.filterbutton {
-  margin-bottom: -0.2px;
-  padding: 0px;
-  width: 150px;
+.filter-button {
+  margin-bottom: -0.15px;
+  padding: 10px;
+  color: white;
+  background-color: #F47A6A;
+  font-family: 'Montserrat';
+  font-size: 12pt;
+  display: flex;
+}
+
+.filter-button:hover {
+  background-color: rgb(252, 173, 162);
+}
+
+.filter {
+  padding: 10px;
+}
+
+.age-filter {
+  float: left;
+  padding-left: 15px;
+}
+
+.musical-filter {
+  float: left;
+  padding-left: 25px;
+}
+
+.date-filter {
+  float: left;
+  padding-left: 25px;
+}
+/* .filter-button img{
   display: block;
+} */
 
-}
-
-.filterbutton img{
-  display: block;
-}
-
-.swiper-container {
-width: 100%;
-height: 100%;
-background-color: white;
-}
-.swiper-slide {
-text-align: center;
-font-size: 18px;
-background:white;
-box-shadow: 0 4px 15px -5px gray;
-/* Center slide text vertically */
-display: -webkit-box;
-display: -ms-flexbox;
-display: -webkit-flex;
-display: flex;
--webkit-box-pack: center;
--ms-flex-pack: center;
--webkit-justify-content: center;
-justify-content: center;
--webkit-box-align: center;
--ms-flex-align: center;
--webkit-align-items: center;
-align-items: center;
+.hidden-tags {
+  visibility: hidden;
+  height: 0px;
 }
 
 /* Sign in modal css */
@@ -183,7 +172,7 @@ align-items: center;
   transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
   z-index: 999999;
 }
-.sign-in-modal-content {
+/* .sign-in-modal-content {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -191,15 +180,13 @@ align-items: center;
   background-color: white;
   padding: 1rem 1.5rem;
   width: 24rem;
-  border-radius: 0.5rem;
-}
+} */
 .sign-in-close-button {
   float: right;
   width: 1.5rem;
   line-height: 1.5rem;
   text-align: center;
   cursor: pointer;
-  border-radius: 0.25rem;
   background-color: lightgray;
 }
 .sign-in-close-button:hover {
@@ -235,7 +222,6 @@ align-items: center;
   background-color: white;
   padding: 1rem 1.5rem;
   width: 24rem;
-  border-radius: 0.5rem;
 }
 .sign-up-close-button {
   float: right;
@@ -243,7 +229,6 @@ align-items: center;
   line-height: 1.5rem;
   text-align: center;
   cursor: pointer;
-  border-radius: 0.25rem;
   background-color: lightgray;
 }
 .sign-up-close-button:hover {
@@ -279,7 +264,6 @@ align-items: center;
   background-color: white;
   padding: 1rem 1.5rem;
   width: 24rem;
-  border-radius: 0.5rem;
 }
 .post-close-button {
   float: right;
@@ -287,7 +271,6 @@ align-items: center;
   line-height: 1.5rem;
   text-align: center;
   cursor: pointer;
-  border-radius: 0.25rem;
   background-color: lightgray;
 }
 .post-close-button:hover {
@@ -298,4 +281,194 @@ align-items: center;
   visibility: visible;
   transform: scale(1.0);
   transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+/* Item modal css */
+
+.item-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  z-index: 999999;
+}
+.item-modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1rem 1.5rem;
+  width: 24rem;
+  border-radius: 0.5rem;
+}
+.item-close-button {
+  float: right;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: lightgray;
+}
+.item-close-button:hover {
+  background-color: darkgray;
+}
+.item-show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+/* darkmode and lightmode switching css */
+
+body.dark-mode {
+  background-color: #111;
+  color: #eee;
+}
+
+/* body.dark-mode a {
+  color: #111;
+} */
+/* body.dark-mode button {
+  background-color: #eee;
+  color: #111;
+} */
+
+body.light-mode {
+  background-color: white;
+  color: #111;
+}
+/* body.light-mode a {
+  color: #111;
+} */
+/* body.light-mode button {
+  background-color: #111;
+  color: #eee;
+} */
+
+/* Sticky Filter */
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .slick-carousel {
+  padding-top: 600px;
+}
+
+.carousel-title-box {
+  margin-left: 40px;
+  margin-right: 40px;
+  box-shadow: 0 4px 15px -10px gray;
+}
+
+.carousel-title-text {
+  color: lightgrey;
+  padding-left: 10px;
+  letter-spacing: 5px;
+}
+
+/* Login/signup form */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #43A047;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+.form .register-form {
+  display: none;
+}
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.container:before, .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+.container .info span .fa {
+  color: #EF3B3A;
 }

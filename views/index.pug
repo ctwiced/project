@@ -1,139 +1,498 @@
+mixin poster(posterData)
+  .poster
+    .type= posterData.type
+    .location= posterData.location
+    .age= posterData.age
+    .admission= posterData.admission
+    .date= posterData.date
+    .time= posterData.time
+    .description= posterData.description
+
 doctype html
 html(lang='en')
   head
     meta(charset='UTF-8')
     link(rel='stylesheet', href='styles.css')
-    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.css')
-    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css')
-
     link(rel='stylesheet', type='text/css', href='slick/slick.css')
-  body
-    //- Slick Carousel
-    .multiple-items
-      div your content
-      div your content
-      div your content
+    link(rel="stylesheet" type="text/css" href="slick/slick-theme.css")
+    link(rel='apple-touch-icon', sizes='180x180', href='/apple-touch-icon.png')
+    link(rel='icon', type='image/png', sizes='32x32', href='/favicon-32x32.png')
+    link(rel='icon', type='image/png', sizes='16x16', href='/favicon-16x16.png')
+    link(rel='manifest', href='/site.webmanifest')
+    link(rel='mask-icon', href='/safari-pinned-tab.svg', color='#5bbad5')
+    meta(name='msapplication-TileColor', content='#da532c')
+    meta(name='theme-color', content='#ffffff')
 
-    //- Header bar
-    .menu-container
-      .menu
-        .links
-          .post
-            a.post-trigger POST
-            .post-modal
-              .post-modal-content
-                span.post-close-button ×
-                h1 Post!
-          .sign-up
-            a.sign-up-trigger SIGN UP
-            .sign-up-modal
-              .sign-up-modal-content
-                span.sign-up-close-button ×
-                h1 sign up!
-                form
-                | username:
-                br
-                input(type='text', name='firstname')
-                br
-                | password:
-                br
-                input(type='text', name='lastname')
-          .sign-in
-            a.sign-in-trigger SIGN IN
-            .sign-in-modal
-              .sign-in-modal-content
-                span.sign-in-close-button ×
-                h1 please sign in!
-                form
-                | username:
-                br
-                input(type='text', name='firstname')
-                br
-                | password:
-                br
-                input(type='text', name='lastname')
-                
+
+  header
+  body#body.light-mode
+    
+    //- Item modal
+    .item-modal
+      .item-modal-content
+        span.item-close-button ×
+        h1 Item!
+
+    //- Post modal
+    .post-modal
+      .post-modal-content
+        .js-add-slide
+          button add slide
+        span.post-close-button ×
+
+    //- Sign up modal
+    .sign-up-modal
+      .sign-up-modal-content
+        span.sign-up-close-button ×
+        h1 sign up!
+        form
+        | username:
+        br
+        input(type='text', name='firstname')
+        br
+        | password:
+        br
+        input(type='text', name='lastname')
+
+    //- Sign in modal
+    .sign-in-modal
+      .login-page
+        .form
+          span.sign-in-close-button ×
+          form.register-form
+            input(type='text', placeholder='name')
+            input(type='password', placeholder='password')
+            input(type='text', placeholder='email address')
+            button create
+            p.message
+              | Already registered? 
+              a(href='#') Sign In
+          form.login-form
+            input(type='text', placeholder='username')
+            input(type='password', placeholder='password')
+            button login
+            p.message
+              | Not registered? 
+              a(href='#') Create an account
+
     //- Hero/logo image
     .header-container
       .header
         .hero
           img(src="images/hero.svg")
+    
 
     //- Filter
-    main
+    main#navbar
+      //- Header bar
+      .menu-container
+        .menu
+          .links
+            label(for='toggle')
+              a.filter-button Click to filter
+            .post
+              a.post-trigger POST
+            //- .sign-up
+            //-   a.sign-up-trigger SIGN UP
+            .sign-in
+              a.sign-in-trigger SIGN IN
+
       input#toggle(type='checkbox')
       label(for='toggle')
-        .filterbutton
-          img(src='images/filterbutton.svg')
+      //-   a.filter-button Filter
+          //- img(src='images/filterbutton.svg')
       #expand
-        section.Filter
-    section.carousel
+        .filter
+          .age-filter
+            p 19+
+            input(type='checkbox')
+          .musical-filter
+            p free
+            input(type='checkbox')
+          .date-filter
+            p free
+            input(type='checkbox')
+      //- dark/light mode toggle
+      //- button(type='button', name='dark_light', onclick='toggleDarkLight()', title='Toggle dark/light mode') 🌛
 
-    //- Swiper Carousel
-    .swiper-container
-      .swiper-wrapper
-        .swiper-slide
-          img(src="images/test1.jpg")
-        .swiper-slide
-          img(src="images/test2.jpg")
-        .swiper-slide
-          img(src="images/test3.jpg")
-        .swiper-slide
-          img(src="images/test4.jpg")
-        .swiper-slide
-          img(src="images/test5.jpg")
-        .swiper-slide
-          img(src="images/test6.jpg")
-        .swiper-slide
-          img(src="images/test7.jpg")
-        .swiper-slide
-          img(src="images/test8.jpg")
-        .swiper-slide
-          img(src="images/test9.jpg")
-        .swiper-slide
-          img(src="images/test10.jpg")
-        .swiper-slide
-          img(src="images/test11.jpg")
-        .swiper-slide
-          img(src="images/test12.jpg")
-      //- Add Pagination
-      //- .swiper-pagination
-      //- Add Arrows
-      .swiper-button-next
-      .swiper-button-prev
 
-    //- Swiper JS and Slick JS
-    script(src='https://code.jquery.com/jquery-3.0.0.js')
-    script(src='https://code.jquery.com/jquery-migrate-3.0.1.js')
-    script(type='text/javascript', src='slick/slick.min.js')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.js')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js')
+    div.carousel-title-box
+      div.carousel-title-text
+        h1 Music
+    //- Carousel 1
+    .slick-carousel
+      div
+        .item
+          img(src="images/test2.jpg").item-trigger
+          a.post-modal POST
+          data(hidden='') musical
+          data(hidden='') 19       
+      div
+        .item
+          img(src="images/test1.jpg").item-trigger
+          a.post-modal POST
+          data(hidden='') musical
+          data(hidden='') 19
+      div
+        .item
+          div
+            a(href='http://www.test.nl', target='_blank')
+              img(src='images/test17.jpg')
+              data(hidden='') musical
+              data(hidden='') 19
+
+      div
+        .item
+          img(src="images/test18.jpg").item-trigger
+          a.post-modal POST
+          data(hidden='') 19
+      div
+        .item
+          img(src="images/test3.jpg").item-trigger
+          a.post-modal POST
+      div
+        .item
+          img(src="images/test19.jpg").item-trigger
+          a.post-modal POST
+      div
+        .item
+          img(src="images/test4.jpg").item-trigger
+          a.post-modal POST
+      div
+        .item
+          img(src="images/test20.jpg").item-trigger
+          a.post-modal POST
+      div
+        .item
+          img(src="images/test5.jpg").item-trigger
+          a.post-modal POST
+      div
+        .poster
+          img(src="images/test21.jpg").item-trigger
+          a.post-modal POST
+      div
+        .poster
+          img(src="images/test6.jpg").item-trigger
+          a.post-modal POST
+      div
+        .poster
+          img(src="images/test22.jpg").item-trigger
+          a.post-modal POST
+      div
+        .poster
+          img(src="images/test7.jpg").item-trigger
+          a.post-modal POST
+      div
+        .poster
+          img(src="images/test23.jpg").item-trigger
+          a.post-modal POST
+      div
+        .poster
+          img(src="images/test8.jpg").item-trigger
+          a.post-modal POST
+      div
+        .poster
+          img(src="images/test24.jpg").item-trigger
+          a.post-modal POST
+
+    div.carousel-title-box
+      div.carousel-title-text
+        h1 Food + Drink
+
+    //- Carousel 2
+    .slick-carousel
+      div
+        .item
+          img(src="images/test25.jpg").item-trigger
+          a.post-modal POST
+          data(hidden='') musical
+          data(hidden='') 19
+      div
+        .item
+          div
+            a(href='http://www.test.nl', target='_blank')
+              img(src='images/test9.jpg')
+              data(hidden='') musical
+              data(hidden='') 19
+      div
+        .item
+          img(src="images/test26.jpg").item-trigger
+          a.post-modal POST
+      div
+        .item
+          img(src="images/test10.jpg").item-trigger
+          a.post-modal POST
+          data(hidden='') 19
+      div
+        .item
+          img(src="images/test27.jpg").item-trigger
+          a.post-modal POST
+      div
+        .item
+          img(src="images/test11.jpg").item-trigger
+          a.post-modal POST
+      div
+        .item
+          img(src="images/test28.jpg").item-trigger
+          a.post-modal POST
+      div
+        .item
+          img(src="images/test12.jpg").item-trigger
+          a.post-modal POST
+      div
+        .item
+          img(src="images/test29.jpg").item-trigger
+          a.post-modal POST
+      div
+        .poster
+          img(src="images/test13.jpg").item-trigger
+          a.post-modal POST
+      div
+        .poster
+          img(src="images/test30.jpg").item-trigger
+          a.post-modal POST
+      div
+        .poster
+          img(src="images/test14.jpg").item-trigger
+          a.post-modal POST
+      div
+        .poster
+          img(src="images/test31.jpg").item-trigger
+          a.post-modal POST
+      div
+        .poster
+          img(src="images/test15.jpg").item-trigger
+          a.post-modal POST
+      div
+        .poster
+          img(src="images/test32.jpg").item-trigger
+          a.post-modal POST
+      div
+        .poster
+          img(src="images/test16.jpg").item-trigger
+          a.post-modal POST
+
+    div.carousel-title-box
+      div.carousel-title-text
+        h1 Theater
+
+    //- Carousel 3
+    .slick-carousel
+      div
+        .item
+          img(src="images/test1.jpg").item-trigger
+          a.post-modal POST
+          data(hidden='') musical
+          data(hidden='') 19
+      div
+        .item
+          div
+            a(href='http://www.test.nl', target='_blank')
+              img(src='images/test17.jpg')
+              data(hidden='') musical
+              data(hidden='') 19
+      div
+        .item
+          img(src="images/test2.jpg").item-trigger
+          a.post-modal POST
+      div
+        .item
+          img(src="images/test18.jpg").item-trigger
+          a.post-modal POST
+          data(hidden='') 19
+      div
+        .item
+          img(src="images/test3.jpg").item-trigger
+          a.post-modal POST
+      div
+        .item
+          img(src="images/test19.jpg").item-trigger
+          a.post-modal POST
+      div
+        .item
+          img(src="images/test4.jpg").item-trigger
+          a.post-modal POST
+      div
+        .item
+          img(src="images/test20.jpg").item-trigger
+          a.post-modal POST
+      div
+        .item
+          img(src="images/test5.jpg").item-trigger
+          a.post-modal POST
+      div
+        .poster
+          img(src="images/test21.jpg").item-trigger
+          a.post-modal POST
+      div
+        .poster
+          img(src="images/test6.jpg").item-trigger
+          a.post-modal POST
+      div
+        .poster
+          img(src="images/test22.jpg").item-trigger
+          a.post-modal POST
+      div
+        .poster
+          img(src="images/test7.jpg").item-trigger
+          a.post-modal POST
+      div
+        .poster
+          img(src="images/test23.jpg").item-trigger
+          a.post-modal POST
+      div
+        .poster
+          img(src="images/test8.jpg").item-trigger
+          a.post-modal POST
+      div
+        .poster
+          img(src="images/test24.jpg").item-trigger
+          a.post-modal POST
+
+    div.carousel-title-box
+      div.carousel-title-text
+        h1 Nightlife
+
+    //- Carousel 4
+    .slick-carousel
+      div
+        .item
+          img(src="images/test25.jpg").item-trigger
+          a.post-modal POST
+          data(hidden='') musical
+          data(hidden='') 19
+      div
+        .item
+          div
+            a(href='http://www.test.nl', target='_blank')
+              img(src='images/test9.jpg')
+              data(hidden='') musical
+              data(hidden='') 19
+      div
+        .item
+          img(src="images/test26.jpg").item-trigger
+          a.post-modal POST
+      div
+        .item
+          img(src="images/test10.jpg").item-trigger
+          a.post-modal POST
+          data(hidden='') 19
+      div
+        .item
+          img(src="images/test27.jpg").item-trigger
+          a.post-modal POST
+      div
+        .item
+          img(src="images/test11.jpg").item-trigger
+          a.post-modal POST
+      div
+        .item
+          img(src="images/test28.jpg").item-trigger
+          a.post-modal POST
+      div
+        .item
+          img(src="images/test12.jpg").item-trigger
+          a.post-modal POST
+      div
+        .item
+          img(src="images/test29.jpg").item-trigger
+          a.post-modal POST
+      div
+        .poster
+          img(src="images/test13.jpg").item-trigger
+          a.post-modal POST
+      div
+        .poster
+          img(src="images/test30.jpg").item-trigger
+          a.post-modal POST
+      div
+        .poster
+          img(src="images/test14.jpg").item-trigger
+          a.post-modal POST
+      div
+        .poster
+          img(src="images/test31.jpg").item-trigger
+          a.post-modal POST
+      div
+        .poster
+          img(src="images/test15.jpg").item-trigger
+          a.post-modal POST
+      div
+        .poster
+          img(src="images/test32.jpg").item-trigger
+          a.post-modal POST
+      div
+        .poster
+          img(src="images/test16.jpg").item-trigger
+          a.post-modal POST
+
+    //- Slick JS
     script(src='scripts.js')
+    script(src='https://code.jquery.com/jquery-3.0.0.js')
+    script(type='text/javascript', src='slick/slick.min.js')
+    script(src='https://code.jquery.com/jquery-migrate-3.0.1.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')
 
     //- Initialize Slick
     script.
-        $('.multiple-items').slick({
+        $('.slick-carousel').slick({
           infinite: true,
-          slidesToShow: 3,
-          slidesToScroll: 3
-        });
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          variableWidth: true,
+          arrows: true,
+          accessibility: true
       });
 
-    //- Initialize Swiper
+      var filtered = false;
+      var slideIndex = 16;
+    
+    //- Filter scripts    
     script.
-      var swiper = new Swiper('.swiper-container', {
-      slidesPerView: 4,
-      spaceBetween: 20,
-      slidesPerGroup: 4,
-      loop: true,
-      loopFillGroupWithBlank: true,
-      pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-      },
-      navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-      },
+        $('.age-filter').on('click', function() {
+            if (filtered === false) {
+            $('.slick-carousel').slick('slickFilter','div:contains("19")');
+            //- $(this).text('All ages');
+            filtered = true;
+            } else {
+            $('.slick-carousel').slick('slickUnfilter');
+            //- $(this).text('19+');
+            filtered = false;
+            }
+        });
+
+    script.
+        $('.musical-filter').on('click', function() {
+            if (filtered === false) {
+            $('.slick-carousel').slick('slickFilter','div:contains("musical")');
+            //- $(this).text('yes musical');
+            filtered = true;
+            } else {
+            $('.slick-carousel').slick('slickUnfilter');
+            //- $(this).text('no musical');
+            filtered = false;
+            }
+        });
+
+    //- Add Posting script
+    script.
+        $('.js-add-slide').on('click', function() {
+            slideIndex++;
+            $('.slick-carousel').slick('slickAdd','<div> <img src="images/test24.jpg"/> </div>');
+        });
+
+        $('.js-remove-slide').on('click', function() {
+            $('.slick-carousel').slick('slickRemove',slideIndex - 1);
+            if (slideIndex !== 0){
+            slideIndex--;
+            }
+        });
+
+    //- Sign in
+    script.
+      $('.message a').click(function(){
+          $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
       });
 footer
+
+
