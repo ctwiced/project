@@ -1,0 +1,136 @@
+/* Slider */
+
+.slick-slider
+{
+    /* Added a margin and set to 40px so that my arrows appear (finally) */
+    margin-left: 40px;
+    margin-right: 40px;
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+    .slick-list
+    {
+        position: relative;
+        display: block;
+        /* made overflow visible to show box shadows around whole poster */
+        overflow: hidden;
+
+        margin: 0;
+        padding: 0;
+    }
+    .slick-list:focus
+    {
+        outline: none;
+    }
+    .slick-list.dragging
+    {
+        cursor: pointer;
+        cursor: hand;
+    }
+
+    .slick-slider .slick-track,
+    .slick-slider .slick-list
+    {
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+            -ms-transform: translate3d(0, 0, 0);
+            -o-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+    }
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    padding:20px;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+    /* Added a margin and set to 0/10px to show drop shadow on all sides*/
+    margin: 0px 10px;
+    height: 100;
+    min-height: 1px;
+    box-shadow: 0 4px 15px -5px gray;
+}
+
+.slick-slide:hover {
+    
+}
+
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+    /* added height and set to 150px to change the size of the images in the carousel */
+    height: 250px;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+/* Added this little bit to get rid of the blue border that kept coming back on click of item... */
+.slick-slide, .slick-slide *{ outline: none !important; }
