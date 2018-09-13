@@ -36,30 +36,42 @@ html(lang='en')
 
     //- Post modal
     .post-modal
-      .post-modal-content
-        .js-add-slide
-          button add slide
-        span.post-close-button ×
+      .login-page
+        .form
+          span.post-close-button
+          form.login-form
+            img(src="images/drop-image-here.svg", ID='image-drop')
+            input(type='text', placeholder='Event Title')
+            input(type='text', placeholder='Event Date')
+            input(type='password', placeholder='Event Time')
+            input(type='password', placeholder='Event Description', ID='description-box' )
+            .js-add-slide
+              button Post!
+            //- p.message
+            //-   | Not registered? 
+            //-   a(href='#') Create an account
+
+
 
     //- Sign up modal
-    .sign-up-modal
-      .sign-up-modal-content
-        span.sign-up-close-button ×
-        h1 sign up!
-        form
-        | username:
-        br
-        input(type='text', name='firstname')
-        br
-        | password:
-        br
-        input(type='text', name='lastname')
+    //- .sign-up-modal
+    //-   .sign-up-modal-content
+    //-     span.sign-up-close-button ×
+    //-     h1 sign up!
+    //-     form
+    //-     | username:
+    //-     br
+    //-     input(type='text', name='firstname')
+    //-     br
+    //-     | password:
+    //-     br
+    //-     input(type='text', name='lastname')
 
     //- Sign in modal
     .sign-in-modal
       .login-page
         .form
-          span.sign-in-close-button ×
+          span.sign-in-close-button
           form.register-form
             input(type='text', placeholder='name')
             input(type='password', placeholder='password')
@@ -92,7 +104,7 @@ html(lang='en')
             label(for='toggle')
               a.filter-button Click to filter
             .post
-              a.post-trigger POST
+              a.post-trigger Post an event
             //- .sign-up
             //-   a.sign-up-trigger SIGN UP
             .sign-in

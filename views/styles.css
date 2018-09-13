@@ -19,14 +19,22 @@
 .links {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .post {
   padding-right: 25px;
+  margin-bottom: -0.15px;
+  padding: 10px;
+  color: white;
+  background-color: #88CCA4;
+  font-family: 'Montserrat';
+  font-size: 12pt;
+  display: flex;
 }
 
-.post-trigger:hover {
-  color: lightgrey;
+.post:hover {
+  background-color: rgb(174, 206, 187);
 }
 
 .sign-in {
@@ -72,7 +80,7 @@ main {
   background-color: white;
   width: 100%;
   margin: 0px auto;
-  z-index: 999999;
+  z-index: 999998;
 }
 
 #toggle {
@@ -401,7 +409,7 @@ body.light-mode {
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 .form input {
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
   outline: 0;
   background: #f2f2f2;
   width: 100%;
@@ -412,10 +420,10 @@ body.light-mode {
   font-size: 14px;
 }
 .form button {
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
   outline: 0;
-  background: #4CAF50;
+  background: #F47A6A;
   width: 100%;
   border: 0;
   padding: 15px;
@@ -426,7 +434,7 @@ body.light-mode {
   cursor: pointer;
 }
 .form button:hover,.form button:active,.form button:focus {
-  background: #43A047;
+  background-color: rgb(252, 173, 162);
 }
 .form .message {
   margin: 15px 0 0;
@@ -434,7 +442,7 @@ body.light-mode {
   font-size: 12px;
 }
 .form .message a {
-  color: #4CAF50;
+  color: #F47A6A;
   text-decoration: none;
 }
 .form .register-form {
@@ -474,6 +482,10 @@ body.light-mode {
   color: #EF3B3A;
 }
 
-.testing {
-  display: inline-block;
+#description-box {
+  height:100px;
+}
+
+#image-drop {
+  margin-bottom: 10px;
 }
