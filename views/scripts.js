@@ -65,7 +65,7 @@ window.addEventListener("click", windowOnClickPost);
 // -----------------------------------------------------------------------------------
 // Item event modal script
 
-var itemModal = document.querySelectorAll(".item-modal");
+var itemModal = document.querySelector(".item-modal");
 var itemTrigger = document.querySelector(".item-trigger");
 var itemCloseButton = document.querySelector(".item-close-button");
 
