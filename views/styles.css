@@ -94,6 +94,7 @@ label {
   background-color: #F47A6A;
   color: white;
   margin-bottom: 10px;
+  border-bottom: white;
 }
 
 #toggle:checked ~ #expand {
