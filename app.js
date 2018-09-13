@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const multer = require('multer');
 const pug = require('pug');
-const port = 5000;
+const port = 3000;
 const router = express.Router();
 const mongoose = require('mongoose');
 // const User = require('../lib/User')
@@ -21,7 +21,7 @@ app.get('/', function(req, res){
 });
 
 // start server -----------------------------------------------------------------
-app.listen(port, function(){
+app.listen(process.env.PORT || port, function(){
   console.log('Server started');
 });
 
