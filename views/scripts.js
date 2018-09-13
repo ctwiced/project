@@ -74,13 +74,13 @@ function toggleItemModal() {
 }
 
 function windowOnClickItem(event) {
-    if (event.target === itemModal) {
+    // if (event.target === itemModal) {
         toggleItemModal();
-    }
+    // }
 }
 
-itemTrigger.addEventListener("click", toggleItemModal);
-itemCloseButton.addEventListener("click", toggleItemModal);
+// itemTrigger.addEventListener("click", toggleItemModal);
+// itemCloseButton.addEventListener("click", toggleItemModal);
 window.addEventListener("click", windowOnClickItem);
 
 // -----------------------------------------------------------------------------------
