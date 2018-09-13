@@ -85,7 +85,7 @@ module.exports = router;
 // const express = require('express');
 // const path = require('path');
 // const bodyParser = require('body-parser');
-// const expressValidator = require('express-validator');
+
 // const multer = require('multer');
 // const pug = require('pug');
 // const flash = require('connect-flash');
@@ -154,23 +154,7 @@ module.exports = router;
 // });
 
 
-// // Express Validator Middleware -----------------------------------------------------------------
-// app.use(expressValidator({
-//   errorFormatter: function(param, msg, value) {
-//       var namespace = param.split('.')
-//       , root    = namespace.shift()
-//       , formParam = root;
 
-//     while(namespace.length) {
-//       formParam += '[' + namespace.shift() + ']';
-//     }
-//     return {
-//       param : formParam,
-//       msg   : msg,
-//       value : value
-//     };
-//   }
-// }));
 
 
 // // Passport Config-----------------------------------------------------------------
