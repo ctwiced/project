@@ -358,7 +358,7 @@ body.light-mode {
 
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
 .sticky {
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
 }
@@ -471,4 +471,8 @@ body.light-mode {
 }
 .container .info span .fa {
   color: #EF3B3A;
+}
+
+.testing {
+  display: inline-block;
 }
