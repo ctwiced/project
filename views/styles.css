@@ -153,7 +153,27 @@ input {
   padding-left: 25px;
 }
 
+.test-filter {
+  float: left;
+  padding-left: 25px;
+}
+
+.search-filter {
+  float: left;
+  padding-left: 25px;
+}
+
+.location-filter {
+  float: left;
+  padding-left: 25px;
+}
+
 .date-filter {
+  float: left;
+  padding-left: 25px;
+}
+
+.time-filter {
   float: left;
   padding-left: 25px;
 }

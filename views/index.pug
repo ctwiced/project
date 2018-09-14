@@ -116,13 +116,25 @@ html(lang='en')
           //- img(src='images/filterbutton.svg')
       #expand
         .filter
+          .search-filter
+            p search
+            input(type='text', placeholder='search')
+          .location-filter
+            p location
+            input(type='text', placeholder='location')
+          .date-filter
+            p date
+            input(type='text', placeholder='date')
+          .time-filter
+            p time
+            input(type='text', placeholder='time')
           .age-filter
             p 19+
             input(type='checkbox')
           .musical-filter
             p free
             input(type='checkbox')
-          .date-filter
+          .test-filter
             p test
             input(type='checkbox')
       //- dark/light mode toggle
