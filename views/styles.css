@@ -527,5 +527,5 @@ body.light-mode {
 }
 
 .slick-carousel-top {
-    background-image: linear-gradient(#FEEB61, white);
+    background-image: linear-gradient(#F47A6A, #FEEB61, white);
 }
