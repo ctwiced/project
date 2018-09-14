@@ -74,9 +74,10 @@ function toggleItemModal() {
 }
 
 function windowOnClickItem(event) {
-    // if (event.target === itemModal) {
+    const modalClass = $(event.target).attr('class');
+    if (modalClass === 'item-trigger' || modalClass === 'item-close-button') {
         toggleItemModal();
-    // }
+    }
 }
 
 // itemTrigger.addEventListener("click", toggleItemModal);
