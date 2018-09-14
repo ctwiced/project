@@ -153,11 +153,6 @@ input {
   padding-left: 25px;
 }
 
-.test-filter {
-  float: left;
-  padding-left: 25px;
-}
-
 .search-filter {
   float: left;
   padding-left: 25px;
@@ -173,10 +168,21 @@ input {
   padding-left: 25px;
 }
 
-.time-filter {
+.morning-filter {
   float: left;
   padding-left: 25px;
 }
+
+.afternoon-filter {
+  float: left;
+  padding-left: 25px;
+}
+
+.night-filter {
+  float: left;
+  padding-left: 25px;
+}
+
 /* .filter-button img{
   display: block;
 } */
@@ -392,15 +398,11 @@ body.light-mode {
   width: 100%;
 }
 
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .slick-carousel {
-  padding-top: 600px;
-}
-
 .carousel-title-box {
   margin-left: 40px;
   margin-right: 40px;
   box-shadow: 0 4px 15px -10px gray;
+  z-index: 999997;
 }
 
 .carousel-title-text {
@@ -408,6 +410,20 @@ body.light-mode {
   padding-left: 10px;
   letter-spacing: 5px;
 }
+
+/* .carousel-title-box-top {
+  width: 250px;
+  margin-left: 40px;
+  margin-right: 40px;
+  box-shadow: 0 4px 15px -10px gray;
+  background-color: #FEEB61;
+}
+
+.carousel-title-text-top {
+  color: grey;
+  padding-left: 10px;
+  letter-spacing: 5px;
+} */
 
 /* Login/signup form */
 
@@ -508,4 +524,8 @@ body.light-mode {
 
 #image-drop {
   margin-bottom: 10px;
+}
+
+.slick-carousel-top {
+    background-image: linear-gradient(#FEEB61, white);
 }

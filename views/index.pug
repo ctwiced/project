@@ -124,18 +124,21 @@ html(lang='en')
             input(type='text', placeholder='location')
           .date-filter
             p date
-            input(type='text', placeholder='date')
-          .time-filter
-            p time
-            input(type='text', placeholder='time')
+            input(type='text', placeholder='mm / dd / yy')
           .age-filter
             p 19+
             input(type='checkbox')
           .musical-filter
             p free
             input(type='checkbox')
-          .test-filter
-            p test
+          .morning-filter
+            p morning
+            input(type='checkbox')
+          .afternoon-filter
+            p afternoon
+            input(type='checkbox')
+          .night-filter
+            p night
             input(type='checkbox')
       //- dark/light mode toggle
       //- button(type='button', name='dark_light', onclick='toggleDarkLight()', title='Toggle dark/light mode') 🌛
@@ -143,82 +146,82 @@ html(lang='en')
 
     div.carousel-title-box
       div.carousel-title-text
-        h1 Music
+        h1 Top Events
     //- Carousel 1
-    .slick-carousel
-      div
-        .item
-          img(src="images/test2.jpg").item-trigger
-          a.post-modal POST
-          data(hidden='') musical
-          data(hidden='') 19       
-      div
-        .item
-          img(src="images/test1.jpg").item-trigger
-          a.post-modal POST
-          data(hidden='') musical
-          data(hidden='') 19
-      div
-        .item
-          div
-            a(href='http://www.test.nl', target='_blank')
-              img(src='images/test17.jpg')
-              data(hidden='') musical
-              data(hidden='') 19
+    .slick-carousel-top
+        div
+          .item
+            img(src="images/test2.jpg").item-trigger
+            a.post-modal POST
+            data(hidden='') musical
+            data(hidden='') 19       
+        div
+          .item
+            img(src="images/test1.jpg").item-trigger
+            a.post-modal POST
+            data(hidden='') musical
+            data(hidden='') 19
+        div
+          .item
+            div
+              a(href='http://www.test.nl', target='_blank')
+                img(src='images/test17.jpg')
+                data(hidden='') musical
+                data(hidden='') 19
 
-      div
-        .item
-          img(src="images/test18.jpg").item-trigger
-          a.post-modal POST
-          data(hidden='') 19
-      div
-        .item
-          img(src="images/test3.jpg").item-trigger
-          a.post-modal POST
-      div
-        .item
-          img(src="images/test19.jpg").item-trigger
-          a.post-modal POST
-      div
-        .item
-          img(src="images/test4.jpg").item-trigger
-          a.post-modal POST
-      div
-        .item
-          img(src="images/test20.jpg").item-trigger
-          a.post-modal POST
-      div
-        .item
-          img(src="images/test5.jpg").item-trigger
-          a.post-modal POST
-      div
-        .poster
-          img(src="images/test21.jpg").item-trigger
-          a.post-modal POST
-      div
-        .poster
-          img(src="images/test6.jpg").item-trigger
-          a.post-modal POST
-      div
-        .poster
-          img(src="images/test22.jpg").item-trigger
-          a.post-modal POST
-      div
-        .poster
-          img(src="images/test7.jpg").item-trigger
-          a.post-modal POST
-      div
-        .poster
-          img(src="images/test23.jpg").item-trigger
-          a.post-modal POST
-      div
-        .poster
-          img(src="images/test8.jpg").item-trigger
-          a.post-modal POST
-      div
-        .poster
-          img(src="images/test24.jpg").item-trigger
-          a.post-modal POST
+        div
+          .item
+            img(src="images/test18.jpg").item-trigger
+            a.post-modal POST
+            data(hidden='') 19
+        div
+          .item
+            img(src="images/test3.jpg").item-trigger
+            a.post-modal POST
+        div
+          .item
+            img(src="images/test19.jpg").item-trigger
+            a.post-modal POST
+        div
+          .item
+            img(src="images/test4.jpg").item-trigger
+            a.post-modal POST
+        div
+          .item
+            img(src="images/test20.jpg").item-trigger
+            a.post-modal POST
+        div
+          .item
+            img(src="images/test5.jpg").item-trigger
+            a.post-modal POST
+        div
+          .poster
+            img(src="images/test21.jpg").item-trigger
+            a.post-modal POST
+        div
+          .poster
+            img(src="images/test6.jpg").item-trigger
+            a.post-modal POST
+        div
+          .poster
+            img(src="images/test22.jpg").item-trigger
+            a.post-modal POST
+        div
+          .poster
+            img(src="images/test7.jpg").item-trigger
+            a.post-modal POST
+        div
+          .poster
+            img(src="images/test23.jpg").item-trigger
+            a.post-modal POST
+        div
+          .poster
+            img(src="images/test8.jpg").item-trigger
+            a.post-modal POST
+        div
+          .poster
+            img(src="images/test24.jpg").item-trigger
+            a.post-modal POST
 
     div.carousel-title-box
       div.carousel-title-text
@@ -457,6 +460,22 @@ html(lang='en')
     script(type='text/javascript', src='slick/slick.min.js')
     script(src='https://code.jquery.com/jquery-migrate-3.0.1.js')
     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')
+
+
+    //- Initialize Slick
+    script.
+        $('.slick-carousel-top').slick({
+          infinite: true,
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          variableWidth: true,
+          arrows: true,
+          accessibility: true
+      });
+
+      var filtered = false;
+      var slideIndex = 16;
+
 
     //- Initialize Slick
     script.
