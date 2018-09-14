@@ -340,8 +340,8 @@ input {
   transform: translate(-50%, -50%);
   background-color: white;
   padding: 1rem 1.5rem;
-  width: 24rem;
-  border-radius: 0.5rem;
+  width: 52rem;
+  /* border-radius: 0.5rem; */
 }
 .item-close-button {
   float: right;
@@ -364,7 +364,7 @@ input {
 
 /* darkmode and lightmode switching css */
 
-body.dark-mode, header.dark-mode {
+html.dark-mode {
   background-color: #111;
   color: #eee;
 }
@@ -529,5 +529,5 @@ body.light-mode {
 }
 
 .slick-carousel-top {
-    background-image: linear-gradient(#F47A6A, #FEEB61, white);
+    background-image: linear-gradient( #FEEB61, white);
 }
