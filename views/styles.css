@@ -364,10 +364,12 @@ input {
 
 /* darkmode and lightmode switching css */
 
-body.dark-mode {
+body.dark-mode, header.dark-mode {
   background-color: #111;
   color: #eee;
 }
+
+
 
 /* body.dark-mode a {
   color: #111;
